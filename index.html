@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="'viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Javascript calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/408316024a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="calc_container">
+        <div id="display">0.0</div>
+        <div id="ac" class="calc_key" onclick="key_pressed(this)">AC</div>
+        <div class="calc_key" onclick="key_pressed(this)">DEL</div>
+        <div class="calc_key operator" onclick="key_pressed(this)">÷</div>
+        <div class="calc_key digit" onclick="key_pressed(this)">1</div>
+        <div class="calc_key digit" onclick="key_pressed(this)">2</div>
+        <div class="calc_key digit" onclick="key_pressed(this)">3</div>
+        <div class="calc_key operator" onclick="key_pressed(this)">*</div>
+        <div class="calc_key digit" onclick="key_pressed(this)">4</div>
+        <div class="calc_key digit" onclick="key_pressed(this)">5</div>
+        <div class="calc_key digit" onclick="key_pressed(this)">6</div>
+        <div class="calc_key operator" onclick="key_pressed(this)">+</div>
+        <div class="calc_key digit" onclick="key_pressed(this)">7</div>
+        <div class="calc_key digit" onclick="key_pressed(this)">8</div>
+        <div class="calc_key digit" onclick="key_pressed(this)">9</div>
+        <div class="calc_key operator" onclick="key_pressed(this)">-</div>
+        <div class="calc_key digit" onclick="key_pressed(this)">0</div>
+        <div class="calc_key decimal" onclick="key_pressed(this)">.</div>
+        <div id="equal" class="calc_key operator" onclick="key_pressed(this)">=</div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

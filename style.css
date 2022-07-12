@@ -1,0 +1,36 @@
+#display {
+    background-color: black;
+    color: green;
+}
+
+.calc_key {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 1rem;
+    text-align: center;
+}
+
+.operator {
+    background-color: yellow;
+}
+
+#equal {
+    background-color: red;
+}
+
+#calc_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;    
+}
+
+#display {
+    grid-column: 1 / span 4;
+}
+
+#ac {
+    grid-column: 1 / span 2;
+}
+
+#equal {
+    grid-column: 3 / span 2;
+}
