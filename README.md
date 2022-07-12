@@ -1,2 +1,2 @@
 # calculator
-A small calculator of javascript practice and css grid experiment
+A small calculator for javascript practice and css grid experiment
