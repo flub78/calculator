@@ -15,8 +15,11 @@
 
 <body>
     <div id="calc_container">
-        <div id="display">0.0</div>
-        <div id="ac" class="calc_key" onclick="key_pressed(this)">AC</div>
+        <div id="display">
+            <div class="previous-operand">0.0</div>
+            <div class="current-operand">0.0</div>
+        </div>
+        <button id="ac" class="calc_key span-two" onclick="key_pressed(this)">AC</button>
         <div class="calc_key" onclick="key_pressed(this)">DEL</div>
         <div class="calc_key operator" onclick="key_pressed(this)">÷</div>
         <div class="calc_key digit" onclick="key_pressed(this)">1</div>
@@ -33,7 +36,7 @@
         <div class="calc_key operator" onclick="key_pressed(this)">-</div>
         <div class="calc_key digit" onclick="key_pressed(this)">0</div>
         <div class="calc_key decimal" onclick="key_pressed(this)">.</div>
-        <div id="equal" class="calc_key operator" onclick="key_pressed(this)">=</div>
+        <div id="equal" class="calc_key operator span-two" onclick="key_pressed(this)">=</div>
     </div>
     <script src="script.js"></script>
 
