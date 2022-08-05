@@ -9,7 +9,7 @@
  */
 const display_current_operand = document.getElementById('current-operand');
 const display_previous_operand = document.getElementById('previous-operand');
-let operation = "";
+let first_digit = true;
 
 /**
  * Callback when a key is pressed
@@ -46,11 +46,12 @@ function key_pressed(e) {
  */
 function digit(key) {
     let curr_op = current_operand();
-    if (curr_op == "0.0") {
+    if (curr_op == "0.0" || first_digit) {
         set_current_operand(key.toString());
     } else {
         set_current_operand(current_operand().toString() + key.toString());
     }
+    first_digit = false;
 }
 /**
  * Callback for AC
@@ -66,7 +67,10 @@ function ac() {
  */
 function del() {
     let curr_op = current_operand();
-    if (curr_op.lenght < 2) {
+    console.log('curr_op = ', curr_op);
+    console.log('len = ', curr_op.length);
+
+    if (curr_op.length < 2) {
         set_current_operand("0.0");
         return;
     }
@@ -90,14 +94,15 @@ function decimal() {
  */
 function operator(key) {
     if (key != "=") {
-        operation = key;
         set_previous_operand (current_operand() + ' ' + key);
         set_current_operand("0.0");
     } else {
         let expr = previous_operand()  + ' ' + current_operand();
+        expr = expr.replace('÷', '/');
         let result = eval(expr);
         set_previous_operand(expr);
         set_current_operand(result);
+        first_digit = true;
     }
 }
 
